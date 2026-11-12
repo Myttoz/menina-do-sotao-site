@@ -3,7 +3,7 @@
 Um espaço seguro para crianças e adolescentes conhecerem suas emoções,
 inspirado no livro *A Menina do Sótão*, da psicóloga **Helenice Aredes**.
 
-**Site:** https://myttoz.github.io/menina-do-sotao/
+**Site:** https://myttoz.github.io/menina-do-sotao-site
 
 ---
 
