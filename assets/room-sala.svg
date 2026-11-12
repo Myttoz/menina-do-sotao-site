@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-label="Sala">
+  <defs>
+    <linearGradient id="sfloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF7EC"/>
+      <stop offset="1" stop-color="#F1E0C0"/>
+    </linearGradient>
+    <linearGradient id="sofa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9CCAC6"/>
+      <stop offset="1" stop-color="#7FB5B5"/>
+    </linearGradient>
+    <linearGradient id="waveB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAC468"/>
+      <stop offset="1" stop-color="#D9A93C"/>
+    </linearGradient>
+    <filter id="srough" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="23" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sbleed" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="sgrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="17"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16" intercept="0"/></feComponentTransfer>
+    </filter>
+    <pattern id="shatchGold" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8A6A1E" stroke-width=".9" opacity=".18"/>
+    </pattern>
+    <pattern id="sstria" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6B4470" stroke-width="1" opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="420" height="240" fill="url(#sfloor)"/>
+
+  <g filter="url(#srough)">
+    <!-- sangra do sofa -->
+    <rect x="34" y="122" width="166" height="90" rx="16" fill="#7FB5B5" opacity=".3" filter="url(#sbleed)"/>
+    <!-- rodape -->
+    <rect x="0" y="176" width="420" height="4" fill="#C98DA6" opacity=".4"/>
+    <!-- tapete -->
+    <ellipse cx="200" cy="218" rx="92" ry="12" fill="#E7B9C9" opacity=".6"/>
+    <ellipse cx="200" cy="218" rx="92" ry="12" fill="none" stroke="#C98DA6" stroke-width="1.5" opacity=".7"/>
+
+    <!-- janela -->
+    <rect x="256" y="44" width="110" height="76" rx="6" fill="#7A5C50"/>
+    <rect x="264" y="52" width="94" height="60" rx="3" fill="#7FA8C9"/>
+    <rect x="309" y="52" width="4" height="60" fill="#EAF2F8"/>
+    <rect x="264" y="80" width="94" height="4" fill="#EAF2F8"/>
+    <path d="M268 56 L280 52 M272 108 L286 52" stroke="#A9C6E2" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    <rect x="248" y="118" width="126" height="8" rx="4" fill="#F3E3C3" stroke="#6B4470" stroke-width="1.5"/>
+
+    <!-- quadrinho com coracao -->
+    <rect x="96" y="56" width="72" height="58" rx="6" fill="#E8C05A" stroke="#C99A32" stroke-width="2"/>
+    <rect x="104" y="64" width="56" height="42" rx="4" fill="#FDF7EC"/>
+    <path d="M132 98 C128 92 118 90 118 82 C118 76 124 74 128 78 C130 80 131 82 132 84 C133 82 134 80 136 78 C140 74 146 76 146 82 C146 90 136 92 132 98 Z" fill="#E98AA0"/>
+
+    <!-- sofa -->
+    <g stroke="#5E8F8B" stroke-width="2">
+      <rect x="52" y="128" width="128" height="30" rx="12" fill="url(#sofa)"/>
+      <rect x="40" y="140" width="152" height="52" rx="14" fill="url(#sofa)"/>
+      <rect x="52" y="148" width="60" height="30" rx="8" fill="#A5CFCB"/>
+      <rect x="118" y="148" width="60" height="30" rx="8" fill="#A5CFCB"/>
+    </g>
+    <rect x="44" y="192" width="12" height="14" rx="4" fill="#7A5C50"/>
+    <rect x="176" y="192" width="12" height="14" rx="4" fill="#7A5C50"/>
+    <rect x="132" y="136" width="34" height="26" rx="8" fill="#C4A3D4" stroke="#8A5B8E" stroke-width="1.5"/>
+    <rect x="40" y="140" width="152" height="52" rx="14" fill="url(#sstria)"/>
+  </g>
+
+  <!-- mechas douradas -->
+  <g filter="url(#srough)">
+    <path d="M-10 224 C50 206 96 238 150 216 C204 196 246 234 300 212 C348 194 392 224 430 206 L430 250 L-10 250 Z" fill="url(#waveB)" opacity=".55"/>
+    <path d="M-10 224 C50 206 96 238 150 216 C204 196 246 234 300 212 C348 194 392 224 430 206 L430 250 L-10 250 Z" fill="url(#shatchGold)"/>
+    <path d="M-10 236 C60 224 110 242 170 228 C230 216 280 240 340 226 C378 218 404 228 430 222 L430 250 L-10 250 Z" fill="#C99A32" opacity=".38"/>
+    <path d="M40 232 C90 222 140 236 190 226" fill="none" stroke="#B98E27" stroke-width="1.6" opacity=".5" stroke-linecap="round"/>
+    <path d="M240 230 C290 220 330 234 380 224" fill="none" stroke="#B98E27" stroke-width="1.6" opacity=".5" stroke-linecap="round"/>
+  </g>
+
+  <!-- brilhos -->
+  <g fill="#C99A32" filter="url(#srough)">
+    <path d="M40 44 C41.6 49 42.4 49.8 47 51 C42.4 52.4 41.6 53 40 58 C38.4 53 37.6 52.4 33 51 C37.6 49.8 38.4 49 40 44 Z"/>
+    <path d="M382 168 C383.2 171.4 383.8 172 387 173 C383.8 174 383.2 174.6 382 178 C380.8 174.6 380.2 174 377 173 C380.2 172 380.8 171.4 382 168 Z"/>
+  </g>
+
+  <rect width="420" height="240" filter="url(#sgrain)" style="mix-blend-mode:multiply" opacity=".55"/>
+</svg>

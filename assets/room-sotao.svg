@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-label="Sótão">
+  <defs>
+    <linearGradient id="atticg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6EBD9"/>
+      <stop offset="1" stop-color="#E8D5B4"/>
+    </linearGradient>
+    <linearGradient id="gable" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C98DA6"/>
+      <stop offset="1" stop-color="#B87A94"/>
+    </linearGradient>
+    <linearGradient id="waveD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAC468"/>
+      <stop offset="1" stop-color="#D9A93C"/>
+    </linearGradient>
+    <filter id="trough" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="59" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tblur" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="tgrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="37"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16" intercept="0"/></feComponentTransfer>
+    </filter>
+    <pattern id="thatch" width="6.5" height="6.5" patternUnits="userSpaceOnUse" patternTransform="rotate(36)">
+      <line x1="0" y1="0" x2="0" y2="6.5" stroke="#4A1E55" stroke-width="1" opacity=".16"/>
+    </pattern>
+    <pattern id="thatchWood" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-36)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#4A3227" stroke-width=".9" opacity=".16"/>
+    </pattern>
+    <pattern id="thatchGold" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8A6A1E" stroke-width=".9" opacity=".18"/>
+    </pattern>
+  </defs>
+
+  <rect width="420" height="240" fill="url(#atticg)"/>
+
+  <g filter="url(#trough)">
+    <!-- interior do telhado -->
+    <polygon points="210,18 30,206 390,206" fill="#F6EBD9" stroke="#6B4470" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="210,18 30,206 62,206 210,46 358,206 390,206" fill="url(#gable)" stroke="none"/>
+    <polygon points="210,18 30,206 62,206 210,46 358,206 390,206" fill="url(#thatch)"/>
+    <polygon points="210,26 52,196 92,196 210,60 328,196 368,196" fill="#C98DA6" opacity=".3"/>
+    <rect x="0" y="204" width="420" height="4" fill="#6B4470" opacity=".35"/>
+
+    <!-- janela redonda -->
+    <circle cx="210" cy="96" r="34" fill="#7A5C50"/>
+    <circle cx="210" cy="96" r="34" fill="url(#thatchWood)"/>
+    <circle cx="210" cy="96" r="26" fill="#7FA8C9"/>
+    <rect x="207" y="70" width="6" height="52" fill="#EAF2F8"/>
+    <rect x="184" y="93" width="52" height="6" fill="#EAF2F8"/>
+    <path d="M192 86 L200 74 M230 112 L220 78" stroke="#A9C6E2" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+
+    <!-- arco-iris -->
+    <g fill="none" stroke-linecap="round" filter="url(#tblur)">
+      <path d="M296 148 A30 30 0 0 1 356 148" stroke="#E98AA0" stroke-width="6"/>
+      <path d="M303 148 A23 23 0 0 1 349 148" stroke="#F2D05A" stroke-width="6"/>
+      <path d="M310 148 A16 16 0 0 1 342 148" stroke="#7FB5B5" stroke-width="6"/>
+    </g>
+    <g fill="none" stroke-linecap="round">
+      <path d="M296 148 A30 30 0 0 1 356 148" stroke="#E98AA0" stroke-width="6" opacity=".55"/>
+      <path d="M303 148 A23 23 0 0 1 349 148" stroke="#F2D05A" stroke-width="6" opacity=".55"/>
+      <path d="M310 148 A16 16 0 0 1 342 148" stroke="#7FB5B5" stroke-width="6" opacity=".55"/>
+    </g>
+
+    <!-- bau -->
+    <g stroke="#6B4470" stroke-width="2">
+      <rect x="290" y="164" width="72" height="40" rx="6" fill="#E8C05A"/>
+      <path d="M290 176 L362 176" stroke="#C99A32" stroke-width="3"/>
+      <rect x="318" y="176" width="14" height="12" rx="2" fill="#C99A32"/>
+      <rect x="286" y="204" width="80" height="6" rx="3" fill="#7A5C50"/>
+    </g>
+    <rect x="290" y="164" width="72" height="40" rx="6" fill="url(#thatchWood)" stroke="none"/>
+
+    <!-- bola -->
+    <circle cx="286" cy="158" r="11" fill="#E98AA0" stroke="#6B4470" stroke-width="2"/>
+    <path d="M278 152 Q286 146 294 152 M276 160 Q286 166 296 160" stroke="#C98DA6" stroke-width="2" fill="none"/>
+
+    <!-- ursinho -->
+    <g stroke="#6B4470" stroke-width="1.5">
+      <circle cx="96" cy="180" r="4.5" fill="#B98A5A"/>
+      <circle cx="122" cy="180" r="4.5" fill="#B98A5A"/>
+      <circle cx="109" cy="192" r="16" fill="#C9A06E"/>
+      <circle cx="109" cy="184" r="10" fill="#C9A06E"/>
+      <ellipse cx="109" cy="202" rx="12" ry="10" fill="#B98A5A"/>
+      <ellipse cx="96" cy="198" rx="5" ry="8" fill="#C9A06E"/>
+      <ellipse cx="122" cy="198" rx="5" ry="8" fill="#C9A06E"/>
+    </g>
+    <g fill="#4A1E55">
+      <circle cx="105.5" cy="183" r="1.5"/>
+      <circle cx="112.5" cy="183" r="1.5"/>
+    </g>
+    <circle cx="109" cy="187.5" r="1.8" fill="#4A1E55"/>
+
+    <!-- notas musicais -->
+    <g fill="#662B75" stroke="#662B75">
+      <ellipse cx="146" cy="84" rx="5" ry="4" transform="rotate(-20 146 84)"/>
+      <path d="M150 84 L150 66 L158 64 L158 70" fill="none" stroke-width="2" stroke-linecap="round"/>
+      <ellipse cx="262" cy="52" rx="4.4" ry="3.4" transform="rotate(15 262 52)"/>
+      <path d="M258 52 L258 66" fill="none" stroke-width="2" stroke-linecap="round"/>
+      <ellipse cx="120" cy="128" rx="4" ry="3.2" transform="rotate(-12 120 128)"/>
+      <path d="M124 128 L124 114" fill="none" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- borboleta -->
+    <g stroke="#6B4470" stroke-width="1">
+      <path d="M254 118 c-7 -8 -16 -4 -13 3 c2 5 9 5 13 -3 Z" fill="#E98AA0"/>
+      <path d="M254 118 c7 -8 16 -4 13 3 c-2 5 -9 5 -13 -3 Z" fill="#F3B6C8"/>
+      <line x1="254" y1="112" x2="254" y2="126" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- mechas de cabelo entrando (motivo do livro) -->
+  <g filter="url(#trough)">
+    <path d="M-12 26 C30 22 60 44 92 40 C112 38 124 30 140 22" fill="none" stroke="#C99A32" stroke-width="15" stroke-linecap="round" opacity=".9"/>
+    <path d="M-12 26 C30 22 60 44 92 40 C112 38 124 30 140 22" fill="none" stroke="url(#waveD)" stroke-width="9" stroke-linecap="round" opacity=".55"/>
+    <path d="M432 30 C392 26 366 46 336 44 C318 42 306 34 292 26" fill="none" stroke="#C99A32" stroke-width="13" stroke-linecap="round" opacity=".9"/>
+    <path d="M432 30 C392 26 366 46 336 44 C318 42 306 34 292 26" fill="none" stroke="url(#waveD)" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+    <path d="M-8 62 C24 58 44 70 68 66" fill="none" stroke="#E8C05A" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+    <path d="M428 66 C400 62 384 72 364 68" fill="none" stroke="#E8C05A" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+    <path d="M-6 26 C30 22 60 44 92 40 C112 38 124 30 140 22" fill="none" stroke="url(#thatchGold)" stroke-width="15" stroke-linecap="round" opacity=".9"/>
+  </g>
+
+  <!-- brilhos -->
+  <g fill="#C99A32" filter="url(#trough)">
+    <path d="M160 40 C161.6 45 162.4 45.8 167 47 C162.4 48.4 161.6 49 160 54 C158.4 49 157.6 48.4 153 47 C157.6 45.8 158.4 45 160 40 Z"/>
+    <path d="M262 148 C263.2 151.4 263.8 152 267 153 C263.8 154 263.2 154.6 262 158 C260.8 154.6 260.2 154 257 153 C260.2 152 260.8 151.4 262 148 Z"/>
+  </g>
+
+  <rect width="420" height="240" filter="url(#tgrain)" style="mix-blend-mode:multiply" opacity=".55"/>
+</svg>

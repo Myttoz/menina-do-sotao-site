@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-label="Porta de fora">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF7EC"/>
+      <stop offset="1" stop-color="#F5E8D2"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D9A7BD"/>
+      <stop offset="1" stop-color="#C4879F"/>
+    </linearGradient>
+    <linearGradient id="wallg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFEF9"/>
+      <stop offset="1" stop-color="#F3E6CF"/>
+    </linearGradient>
+    <linearGradient id="doorg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#75438A"/>
+      <stop offset="1" stop-color="#5B2A68"/>
+    </linearGradient>
+    <linearGradient id="waveA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAC468"/>
+      <stop offset="1" stop-color="#D9A93C"/>
+    </linearGradient>
+    <!-- borda tremida de desenho a mao -->
+    <filter id="rough" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- sangra de aquarela -->
+    <filter id="bleed" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <!-- grao de papel -->
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16" intercept="0"/></feComponentTransfer>
+    </filter>
+    <!-- hachura do livro -->
+    <pattern id="hatchPlum" width="6.5" height="6.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="6.5" stroke="#4A1E55" stroke-width="1" opacity=".16"/>
+    </pattern>
+    <pattern id="hatchGold" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-32)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8A6A1E" stroke-width=".9" opacity=".18"/>
+    </pattern>
+    <pattern id="striations" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6B4470" stroke-width="1" opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="420" height="240" fill="url(#sky)"/>
+
+  <g filter="url(#rough)">
+    <!-- sangra atras da casa -->
+    <rect x="44" y="96" width="332" height="126" rx="10" fill="#C98DA6" opacity=".28" filter="url(#bleed)"/>
+    <polygon points="24,102 210,24 396,102" fill="#C98DA6" opacity=".28" filter="url(#bleed)"/>
+
+    <!-- casa -->
+    <polygon points="30,96 210,22 390,96 390,104 30,104" fill="url(#roof)"/>
+    <polygon points="30,96 210,22 390,96 390,104 30,104" fill="url(#hatchPlum)"/>
+    <polygon points="30,104 210,28 390,104" fill="none" stroke="#6B4470" stroke-width="2.5" stroke-linejoin="round"/>
+    <rect x="52" y="104" width="316" height="112" fill="url(#wallg)" stroke="#6B4470" stroke-width="2.5"/>
+    <rect x="52" y="104" width="316" height="112" fill="url(#striations)"/>
+
+    <!-- porta -->
+    <rect x="86" y="118" width="76" height="98" rx="6" fill="url(#doorg)" stroke="#4A1E55" stroke-width="2.5"/>
+    <rect x="98" y="130" width="52" height="74" rx="4" fill="none" stroke="#9A6FAE" stroke-width="2"/>
+    <circle cx="150" cy="168" r="5" fill="#E8C05A" stroke="#C99A32" stroke-width="1.5"/>
+
+    <!-- tapinho -->
+    <ellipse cx="124" cy="224" rx="46" ry="7" fill="#E8C05A" opacity=".7"/>
+    <ellipse cx="124" cy="224" rx="46" ry="7" fill="none" stroke="#C99A32" stroke-width="1.5"/>
+
+    <!-- janela estilo do livro -->
+    <rect x="220" y="130" width="104" height="70" rx="6" fill="#7A5C50"/>
+    <rect x="228" y="138" width="88" height="54" rx="3" fill="#7FA8C9"/>
+    <rect x="270" y="138" width="4" height="54" fill="#EAF2F8"/>
+    <rect x="228" y="162" width="88" height="4" fill="#EAF2F8"/>
+    <path d="M232 142 L244 138 M236 190 L248 138" stroke="#A9C6E2" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    <rect x="212" y="198" width="120" height="8" rx="4" fill="#F3E3C3" stroke="#6B4470" stroke-width="1.5"/>
+
+    <!-- florzinhas -->
+    <g stroke="#6B4470" stroke-width="1.5">
+      <path d="M74 216 q0 -16 0 -24" fill="none"/>
+      <circle cx="74" cy="188" r="5" fill="#E98AA0"/>
+      <circle cx="68" cy="194" r="4" fill="#F3B6C8"/>
+      <circle cx="80" cy="194" r="4" fill="#F3B6C8"/>
+      <rect x="66" y="210" width="16" height="12" rx="2" fill="#7FB5B5"/>
+    </g>
+  </g>
+
+  <!-- mechas de cabelo dourado com textura -->
+  <g filter="url(#rough)">
+    <path d="M-10 226 C50 206 96 238 150 216 C204 196 246 234 300 212 C348 194 392 224 430 206 L430 250 L-10 250 Z" fill="url(#waveA)" opacity=".72"/>
+    <path d="M-10 226 C50 206 96 238 150 216 C204 196 246 234 300 212 C348 194 392 224 430 206 L430 250 L-10 250 Z" fill="url(#hatchGold)"/>
+    <path d="M-10 236 C60 224 110 242 170 228 C230 216 280 240 340 226 C378 218 404 228 430 222 L430 250 L-10 250 Z" fill="#C99A32" opacity=".45"/>
+    <path d="M28 232 C70 220 120 234 168 224" fill="none" stroke="#B98E27" stroke-width="1.6" opacity=".55" stroke-linecap="round"/>
+    <path d="M210 230 C260 218 310 234 358 224" fill="none" stroke="#B98E27" stroke-width="1.6" opacity=".55" stroke-linecap="round"/>
+    <path d="M90 240 C130 232 176 242 226 234" fill="none" stroke="#8A6A1E" stroke-width="1.3" opacity=".4" stroke-linecap="round"/>
+  </g>
+
+  <!-- brilhos -->
+  <g fill="#C99A32" filter="url(#rough)">
+    <path d="M330 52 C332 58 333 59 339 61 C333 63 332 64 330 70 C328 64 327 63 321 61 C327 59 328 58 330 52 Z"/>
+    <path d="M358 84 C359.4 88 360 88.6 364 90 C360 91.4 359.4 92 358 96 C356.6 92 356 91.4 352 90 C356 88.6 356.6 88 358 84 Z"/>
+    <path d="M52 60 C53.2 63.4 53.8 64 57 65 C53.8 66 53.2 66.6 52 70 C50.8 66.6 50.2 66 47 65 C50.2 64 50.8 63.4 52 60 Z"/>
+  </g>
+
+  <!-- grao de papel -->
+  <rect width="420" height="240" filter="url(#grain)" style="mix-blend-mode:multiply" opacity=".55"/>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-label="Quarto">
+  <defs>
+    <linearGradient id="qfloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF7EC"/>
+      <stop offset="1" stop-color="#F1E0C0"/>
+    </linearGradient>
+    <linearGradient id="blanket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A678B8"/>
+      <stop offset="1" stop-color="#855689"/>
+    </linearGradient>
+    <linearGradient id="qsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A1E55"/>
+      <stop offset="1" stop-color="#3A1745"/>
+    </linearGradient>
+    <linearGradient id="waveC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAC468"/>
+      <stop offset="1" stop-color="#D9A93C"/>
+    </linearGradient>
+    <filter id="qrough" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="41" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="qbleed" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="qgrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="29"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16" intercept="0"/></feComponentTransfer>
+    </filter>
+    <pattern id="qhatch" width="6.5" height="6.5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
+      <line x1="0" y1="0" x2="0" y2="6.5" stroke="#4A1E55" stroke-width="1" opacity=".2"/>
+    </pattern>
+    <pattern id="qhatchGold" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-28)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#8A6A1E" stroke-width=".9" opacity=".18"/>
+    </pattern>
+    <pattern id="qstria" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6B4470" stroke-width="1" opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="420" height="240" fill="url(#qfloor)"/>
+
+  <g filter="url(#qrough)">
+    <!-- sangra da cama -->
+    <rect x="44" y="132" width="218" height="68" rx="12" fill="#8A5B8E" opacity=".3" filter="url(#qbleed)"/>
+    <rect x="0" y="176" width="420" height="4" fill="#C98DA6" opacity=".4"/>
+
+    <!-- janela noturna -->
+    <rect x="286" y="38" width="96" height="72" rx="6" fill="#4A1E55"/>
+    <rect x="292" y="44" width="84" height="60" rx="4" fill="url(#qsky)"/>
+    <path d="M316 74 a14 14 0 1 1 12 -20 a11 11 0 1 0 -12 20 Z" fill="#E8C05A"/>
+    <g fill="#F8E1A5">
+      <circle cx="342" cy="58" r="2.4"/>
+      <circle cx="358" cy="86" r="2"/>
+      <circle cx="304" cy="94" r="2"/>
+    </g>
+    <rect x="278" y="108" width="112" height="8" rx="4" fill="#F3E3C3" stroke="#6B4470" stroke-width="1.5"/>
+
+    <!-- bandeirinhas -->
+    <path d="M36 44 C80 60 120 62 156 50" fill="none" stroke="#8A5B8E" stroke-width="2"/>
+    <g stroke="#6B4470" stroke-width="1">
+      <path d="M52 50 l12 2 l-5 10 Z" fill="#E98AA0"/>
+      <path d="M78 56 l12 1 l-4 10 Z" fill="#F2D05A"/>
+      <path d="M106 58 l12 0 l-4 10 Z" fill="#7FB5B5"/>
+      <path d="M132 54 l12 -1 l-3 10 Z" fill="#C4A3D4"/>
+    </g>
+
+    <!-- tapete -->
+    <ellipse cx="150" cy="220" rx="110" ry="14" fill="#7FB5B5" opacity=".32"/>
+    <ellipse cx="150" cy="220" rx="110" ry="14" fill="none" stroke="#5E8F8B" stroke-width="1.5" opacity=".5"/>
+
+    <!-- cama -->
+    <rect x="52" y="96" width="20" height="96" rx="8" fill="#C98DA6" stroke="#6B4470" stroke-width="2"/>
+    <rect x="52" y="140" width="200" height="52" rx="10" fill="url(#blanket)" stroke="#4A1E55" stroke-width="2.5"/>
+    <rect x="52" y="140" width="200" height="52" rx="10" fill="url(#qhatch)"/>
+    <rect x="76" y="128" width="64" height="26" rx="9" fill="#FDF7EC" stroke="#6B4470" stroke-width="2"/>
+    <path d="M64 158 C110 152 180 152 244 158 L252 176 L56 176 Z" fill="#662B75" opacity=".5"/>
+    <g fill="#E7B9C9" opacity=".9">
+      <path d="M110 164 c-3 -4 -9 -4 -9 -9 c0 -4 5 -5 7 -2 c1 1 1.6 2 2 3 c.4 -1 1 -2 2 -3 c2 -3 7 -2 7 2 c0 5 -6 5 -9 9 Z"/>
+      <path d="M160 168 c-2.4 -3.2 -7.2 -3.2 -7.2 -7.2 c0 -3.2 4 -4 5.6 -1.6 c.8 1 1.2 1.6 1.6 2.4 c.4 -.8 .8 -1.4 1.6 -2.4 c1.6 -2.4 5.6 -1.6 5.6 1.6 c0 4 -4.8 4 -7.2 7.2 Z"/>
+      <path d="M208 163 c-2.4 -3.2 -7.2 -3.2 -7.2 -7.2 c0 -3.2 4 -4 5.6 -1.6 c.8 1 1.2 1.6 1.6 2.4 c.4 -.8 .8 -1.4 1.6 -2.4 c1.6 -2.4 5.6 -1.6 5.6 1.6 c0 4 -4.8 4 -7.2 7.2 Z"/>
+    </g>
+    <rect x="56" y="192" width="12" height="16" rx="4" fill="#7A5C50"/>
+    <rect x="236" y="192" width="12" height="16" rx="4" fill="#7A5C50"/>
+
+    <!-- urso -->
+    <g stroke="#6B4470" stroke-width="1.5">
+      <circle cx="296" cy="172" r="4" fill="#B98A5A"/>
+      <circle cx="312" cy="172" r="4" fill="#B98A5A"/>
+      <circle cx="304" cy="188" r="14" fill="#C9A06E"/>
+      <circle cx="304" cy="180" r="9" fill="#C9A06E"/>
+      <ellipse cx="304" cy="196" rx="11" ry="9" fill="#B98A5A"/>
+    </g>
+    <g fill="#4A1E55">
+      <circle cx="301" cy="179" r="1.4"/>
+      <circle cx="307" cy="179" r="1.4"/>
+    </g>
+    <circle cx="304" cy="183" r="1.6" fill="#4A1E55"/>
+  </g>
+
+  <!-- mechas douradas -->
+  <g filter="url(#qrough)">
+    <path d="M-10 226 C50 210 96 238 150 220 C204 202 246 234 300 216 C348 200 392 226 430 212 L430 250 L-10 250 Z" fill="url(#waveC)" opacity=".55"/>
+    <path d="M-10 226 C50 210 96 238 150 220 C204 202 246 234 300 216 C348 200 392 226 430 212 L430 250 L-10 250 Z" fill="url(#qhatchGold)"/>
+    <path d="M-10 236 C60 224 110 242 170 228 C230 216 280 240 340 226 C378 218 404 228 430 222 L430 250 L-10 250 Z" fill="#C99A32" opacity=".36"/>
+    <path d="M36 234 C86 224 136 238 186 228" fill="none" stroke="#B98E27" stroke-width="1.6" opacity=".5" stroke-linecap="round"/>
+    <path d="M236 230 C286 220 336 236 386 226" fill="none" stroke="#B98E27" stroke-width="1.6" opacity=".5" stroke-linecap="round"/>
+  </g>
+
+  <!-- brilho -->
+  <path d="M258 58 C259.6 63 260.4 63.8 265 65 C260.4 66.4 259.6 67 258 72 C256.4 67 255.6 66.4 251 65 C255.6 63.8 256.4 63 258 58 Z" fill="#C99A32" filter="url(#qrough)"/>
+
+  <rect width="420" height="240" filter="url(#qgrain)" style="mix-blend-mode:multiply" opacity=".55"/>
+</svg>
